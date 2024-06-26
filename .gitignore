@@ -1,0 +1,6 @@
+backend/node_modules
+backend/.env
+iContacts/node_modules
+iContacts/dist
+iContacts/dist-ssr
+iContacts/*.local
