@@ -1,1 +1,1 @@
-# Server code for iContacts git repo
+# Server code for iContacts-frontend repository
