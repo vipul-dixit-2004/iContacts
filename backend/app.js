@@ -16,7 +16,7 @@ const PORT = process.env.PORT;
 connectToDb();
 
 //api routes
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
   res.status(200).json({ status: "ok" });
 });
 //user routes
