@@ -37,7 +37,7 @@ app.post("/checkAuth", requireAuth, controller_user.checkAuth);
 //add Contact
 app.post("/addContact", controller_contact.addContact);
 
-app.get("/fetchContacts", controller_contact.fetchContacts);
+app.post("/fetchContacts", controller_contact.fetchContacts);
 
 app.listen(PORT, () => {
   console.log("Server is running...");

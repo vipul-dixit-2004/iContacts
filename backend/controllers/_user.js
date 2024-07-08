@@ -25,11 +25,11 @@ const login = async (req, res) => {
   try {
     //check weather user exists
     const user = await Users.findOne({ user_email: req.body.user_email });
-    if (!user) res.sendStatus(401); //unauthorised access
+    if (!user) return res.sendStatus(401); //unauthorised access
 
     //Matching password
     const pwdMatch = bcrypt.compareSync(req.body.password, user.password);
-    if (!pwdMatch) res.sendStatus(401); //unauthorised access
+    if (!pwdMatch) return res.sendStatus(401); //unauthorised access
 
     //creating jsonwebtoken
     const exp = Date.now() + 1000 * 60 * 60 * 24 * 30; //for 30 days
