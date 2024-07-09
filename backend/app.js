@@ -9,7 +9,13 @@ const controller_contact = require("./controllers/_contact");
 //setup application
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: true,
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
+
 app.use(cookieParser());
 app.use(express.json());
 const PORT = process.env.PORT;
