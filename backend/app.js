@@ -36,7 +36,7 @@ app.post("/login", controller_user.login);
 app.get("/logout", controller_user.logout);
 
 //check-auth
-app.post("/checkAuth", requireAuth, controller_user.checkAuth);
+app.get("/checkAuth", requireAuth, controller_user.checkAuth);
 
 //contact components Routes
 
